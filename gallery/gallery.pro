@@ -1,6 +1,7 @@
 TEMPLATE = app
 TARGET = gallery
 QT += quick quickcontrols2
+QT += xml \
 
 
 SOURCES += \

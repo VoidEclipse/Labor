@@ -164,50 +164,42 @@ ApplicationWindow {
             height: parent.height - avatarBackground.height
             anchors.top: avatarBackground.bottom
 
+
             delegate: ItemDelegate {
-                x: 10
-                height: 55
-                width: parent.width - 10
+                           height: 55
+                           width: parent.width
+                           text: model.title
 
 
+                           Image {
+                               id: listIcon
+                               x: 10
+                               anchors.verticalCenter: parent.verticalCenter
+                               source: model.image
 
-                RowLayout{
+                           }
 
-                    anchors.verticalCenter: parent.verticalCenter
-                    Image
-                    {
-                        id: image
-                        anchors.verticalCenter: parent.verticalCenter
-                        source: model.image
 
-                    }
-                    Text
-                    {
-                        id: name
-                        text: model.title
-                    }
-                }
-
-                highlighted: ListView.isCurrentItem
-                onClicked: {
-                    listView.currentIndex = index
-                    stackView.push(model.source)
-                    drawer.close()
-                }
-            }
-
+                           highlighted: ListView.isCurrentItem
+                           onClicked: {
+                               listView.currentIndex = index
+                               stackView.push(model.source)
+                               drawer.close()
+                           }
+                       }
 
 
             model: ListModel {
-                ListElement { title: "Новости";       source: "qrc:/pages/BusyIndicatorPage.qml";   image: "qrc:/images/008-folded-newspaper.png"; }
-                ListElement { title: "Профиль";       source: "qrc:/pages/profile.qml";        image: "qrc:/images/007-social.png" }
-                ListElement { title: "Сообщения";     source: "qrc:/pages/CheckBoxPage.qml";        image: "qrc:/images/009-web.png" }
-                ListElement { title: "Цели";          source: "qrc:/pages/ComboBoxPage.qml";        image: "qrc:/images/006-target.png" }
-                ListElement { title: "Акции";         source: "qrc:/pages/DialPage.qml";            image: "qrc:/images/005-gift.png" }
-                ListElement { title: "Студенты";      source: "qrc:/pages/DialogPage.qml";          image: "qrc:/images/004-graduation-cap.png" }
-                ListElement { title: "Преподаватели"; source: "qrc:/pages/DelegatePage.qml";        image: "qrc:/images/003-university-lecture.png" }
-                ListElement { title: "Настройки";     source: "qrc:/pages/FramePage.qml";           image: "qrc:/images/002-settings.png" }
-                ListElement { title: "О приложении";  source: "qrc:/pages/GroupBoxPage.qml";        image: "qrc:/images/001-round.png" }
+                ListElement { title: "          Новости";       source: "qrc:/pages/news.qml";                image: "qrc:/images/newsicon.png"; }
+                ListElement { title: "          Профиль";       source: "qrc:/pages/profile.qml";             image: "qrc:/images/profileicon.png" }
+                ListElement { title: "          Сообщения";     source: "qrc:/pages/messages.qml";            image: "qrc:/images/messagesicon.png" }
+                ListElement { title: "          Цели";          source: "qrc:/pages/ComboBoxPage.qml";        image: "qrc:/images/tasksicon.png" }
+                ListElement { title: "          Акции";         source: "qrc:/pages/DialPage.qml";            image: "qrc:/images/salesicon.png" }
+                ListElement { title: "          Студенты";      source: "qrc:/pages/DialogPage.qml";          image: "qrc:/images/studentsicon.png" }
+                ListElement { title: "          Преподаватели"; source: "qrc:/pages/DelegatePage.qml";        image: "qrc:/images/teachersicon.png" }
+                ListElement { title: "          Расписание";    source: "qrc:/pages/schedule.qml";            image: "qrc:/images/scheduleicon.png" }
+                ListElement { title: "          Настройки";     source: "qrc:/pages/settings.qml";            image: "qrc:/images/settingsicon.png" }
+                ListElement { title: "          О приложении";  source: "qrc:/pages/GroupBoxPage.qml";        image: "qrc:/images/infoicon.png" }
             }
 
             ScrollIndicator.vertical: ScrollIndicator { }
@@ -222,94 +214,6 @@ ApplicationWindow {
             id: pane
 
 
-
-    Dialog {
-        id: settingsDialog
-        x: Math.round((window.width - width) / 2)
-        y: Math.round(window.height / 6)
-        width: Math.round(Math.min(window.width, window.height) / 3 * 2)
-        modal: true
-        focus: true
-        title: "Settings"
-
-        standardButtons: Dialog.Ok | Dialog.Cancel
-        onAccepted: {
-            settings.style = styleBox.displayText
-            settingsDialog.close()
-        }
-        onRejected: {
-            styleBox.currentIndex = styleBox.styleIndex
-            settingsDialog.close()
-        }
-
-        contentItem: ColumnLayout {
-            id: settingsColumn
-            spacing: 20
-
-            RowLayout {
-                spacing: 10
-
-                Label {
-                    text: "Style:"
-                }
-
-                ComboBox {
-                    id: styleBox
-                    property int styleIndex: -1
-                    model: ["Default", "Material", "Universal"]
-                    Component.onCompleted: {
-                        styleIndex = find(settings.style, Qt.MatchFixedString)
-                        if (styleIndex !== -1)
-                            currentIndex = styleIndex
-                    }
-                    Layout.fillWidth: true
-                }
-            }
-
-            Label {
-                text: "Restart required"
-                color: "#e41e25"
-                opacity: styleBox.currentIndex !== styleBox.styleIndex ? 1.0 : 0.0
-                horizontalAlignment: Label.AlignHCenter
-                verticalAlignment: Label.AlignVCenter
-                Layout.fillWidth: true
-                Layout.fillHeight: true
-            }
         }
     }
-
-    Dialog {
-        id: aboutDialog
-        modal: true
-        focus: true
-        title: "About"
-        x: (window.width - width) / 2
-        y: window.height / 6
-        width: Math.min(window.width, window.height) / 3 * 2
-        contentHeight: aboutColumn.height
-
-        Column {
-            id: aboutColumn
-            spacing: 20
-
-            Label {
-                width: aboutDialog.availableWidth
-                text: "The Qt Quick Controls 2 module delivers the next generation user interface controls based on Qt Quick."
-                wrapMode: Label.Wrap
-                font.pixelSize: 12
-            }
-
-            Label {
-                width: aboutDialog.availableWidth
-                text: "In comparison to the desktop-oriented Qt Quick Controls 1, Qt Quick Controls 2 "
-                      + "are an order of magnitude simpler, lighter and faster, and are primarily targeted "
-                      + "towards embedded and mobile platforms."
-                wrapMode: Label.Wrap
-                font.pixelSize: 12
-            }
-        }
-    }
-}
-
-}
 }

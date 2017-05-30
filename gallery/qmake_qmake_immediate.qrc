@@ -2,15 +2,9 @@
 <qresource prefix="/">
 <file alias="gallery.qml">/home/void/qtprojects/gallery/gallery.qml</file>
 <file alias="qtquickcontrols2.conf">/home/void/qtprojects/gallery/qtquickcontrols2.conf</file>
-<file alias="images/001-round.png">/home/void/qtprojects/gallery/images/001-round.png</file>
-<file alias="images/002-settings.png">/home/void/qtprojects/gallery/images/002-settings.png</file>
 <file alias="images/003-university-lecture.png">/home/void/qtprojects/gallery/images/003-university-lecture.png</file>
 <file alias="images/004-graduation-cap.png">/home/void/qtprojects/gallery/images/004-graduation-cap.png</file>
-<file alias="images/005-gift.png">/home/void/qtprojects/gallery/images/005-gift.png</file>
-<file alias="images/006-target.png">/home/void/qtprojects/gallery/images/006-target.png</file>
-<file alias="images/007-social.png">/home/void/qtprojects/gallery/images/007-social.png</file>
 <file alias="images/008-folded-newspaper.png">/home/void/qtprojects/gallery/images/008-folded-newspaper.png</file>
-<file alias="images/009-web.png">/home/void/qtprojects/gallery/images/009-web.png</file>
 <file alias="images/avatar.png">/home/void/qtprojects/gallery/images/avatar.png</file>
 <file alias="images/avatarupload.png">/home/void/qtprojects/gallery/images/avatarupload.png</file>
 <file alias="images/back.png">/home/void/qtprojects/gallery/images/back.png</file>
@@ -21,6 +15,7 @@
 <file alias="images/drawer@2x.png">/home/void/qtprojects/gallery/images/drawer@2x.png</file>
 <file alias="images/drawer@3x.png">/home/void/qtprojects/gallery/images/drawer@3x.png</file>
 <file alias="images/drawer@4x.png">/home/void/qtprojects/gallery/images/drawer@4x.png</file>
+<file alias="images/infoicon.png">/home/void/qtprojects/gallery/images/infoicon.png</file>
 <file alias="images/intro.png">/home/void/qtprojects/gallery/images/intro.png</file>
 <file alias="images/logo.png">/home/void/qtprojects/gallery/images/logo.png</file>
 <file alias="images/menu.png">/home/void/qtprojects/gallery/images/menu.png</file>
@@ -28,8 +23,17 @@
 <file alias="images/menu@3x.png">/home/void/qtprojects/gallery/images/menu@3x.png</file>
 <file alias="images/menu@4x.png">/home/void/qtprojects/gallery/images/menu@4x.png</file>
 <file alias="images/menuBackground.png">/home/void/qtprojects/gallery/images/menuBackground.png</file>
+<file alias="images/messagesicon.png">/home/void/qtprojects/gallery/images/messagesicon.png</file>
+<file alias="images/newsicon.png">/home/void/qtprojects/gallery/images/newsicon.png</file>
+<file alias="images/profileicon.png">/home/void/qtprojects/gallery/images/profileicon.png</file>
 <file alias="images/rksi.png">/home/void/qtprojects/gallery/images/rksi.png</file>
+<file alias="images/salesicon.png">/home/void/qtprojects/gallery/images/salesicon.png</file>
+<file alias="images/scheduleicon.png">/home/void/qtprojects/gallery/images/scheduleicon.png</file>
+<file alias="images/settingsicon.png">/home/void/qtprojects/gallery/images/settingsicon.png</file>
 <file alias="images/shadow_title.png">/home/void/qtprojects/gallery/images/shadow_title.png</file>
+<file alias="images/studentsicon.png">/home/void/qtprojects/gallery/images/studentsicon.png</file>
+<file alias="images/tasksicon.png">/home/void/qtprojects/gallery/images/tasksicon.png</file>
+<file alias="images/teachersicon.png">/home/void/qtprojects/gallery/images/teachersicon.png</file>
 <file alias="images/+material/back.png">/home/void/qtprojects/gallery/images/+material/back.png</file>
 <file alias="images/+material/back@2x.png">/home/void/qtprojects/gallery/images/+material/back@2x.png</file>
 <file alias="images/+material/back@3x.png">/home/void/qtprojects/gallery/images/+material/back@3x.png</file>
@@ -48,6 +52,7 @@
 <file alias="pages/news.qml">/home/void/qtprojects/gallery/pages/news.qml</file>
 <file alias="pages/profile.qml">/home/void/qtprojects/gallery/pages/profile.qml</file>
 <file alias="pages/registration.qml">/home/void/qtprojects/gallery/pages/registration.qml</file>
+<file alias="pages/schedule.qml">/home/void/qtprojects/gallery/pages/schedule.qml</file>
 <file alias="pages/settings.qml">/home/void/qtprojects/gallery/pages/settings.qml</file>
 </qresource>
 </RCC>

@@ -12,7 +12,7 @@ ApplicationWindow {
     width: login.width
     height: login.height
     visible: true
-    signal loginExit
+
 
      Rectangle {
          id: rectangle

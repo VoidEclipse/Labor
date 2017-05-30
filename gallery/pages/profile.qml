@@ -18,7 +18,7 @@ Page {
         anchors.bottomMargin: -220
         anchors.fill: parent
         contentHeight: pane.implicitHeight
-        flickableDirection: Flickable.AutoFlickIfNeeded
+        flickableDirection: Flickable.VerticalFlick
 
         Pane {
             id: pane
@@ -186,8 +186,5 @@ Page {
 
         ScrollIndicator.vertical: ScrollIndicator { }
 
-
     }
-
-
 }

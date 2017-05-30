@@ -649,29 +649,33 @@ qrc_qmake_qmake_immediate.cpp: qmake_qmake_immediate.qrc \
 		images/008-folded-newspaper.png \
 		images/drawer@4x.png \
 		images/shadow_title.png \
-		images/007-social.png \
 		images/menu@3x.png \
 		images/drawer.png \
 		images/back@4x.png \
 		images/drawer@3x.png \
+		images/newsicon.png \
 		images/menu@2x.png \
-		images/001-round.png \
-		images/009-web.png \
+		images/studentsicon.png \
 		images/back@3x.png \
-		images/002-settings.png \
 		images/drawer@2x.png \
-		images/005-gift.png \
 		images/avatar.png \
-		images/003-university-lecture.png \
+		images/profileicon.png \
 		images/menu.png \
+		images/003-university-lecture.png \
 		images/back@2x.png \
+		images/salesicon.png \
 		images/rksi.png \
 		images/intro.png \
+		images/settingsicon.png \
+		images/tasksicon.png \
+		images/infoicon.png \
+		images/scheduleicon.png \
+		images/teachersicon.png \
 		images/004-graduation-cap.png \
 		images/back.png \
-		images/006-target.png \
 		images/logo.png \
 		images/avatarupload.png \
+		images/messagesicon.png \
 		images/+material/back@4x.png \
 		images/+material/ic_account_circle_black_48dp.png \
 		images/+material/menu@3x.png \
@@ -688,6 +692,7 @@ qrc_qmake_qmake_immediate.cpp: qmake_qmake_immediate.qrc \
 		pages/news.qml \
 		pages/login.qml \
 		pages/registration.qml \
+		pages/schedule.qml \
 		pages/messages.qml \
 		pages/profile.qml \
 		pages/settings.qml
