@@ -46,9 +46,9 @@ Page {
                     currentIndex: 0
                     model: ListModel {
                         id: grouplist
+                        ListElement { text: "..."; }
                         ListElement { text: "ИБ-21"; }
                         ListElement { text: "ИБ-11"; }
-                        ListElement { text: "ПОКС-21"; }
                         ListElement { text: "ПОКС-11"; }
                         ListElement { text: "ПОКС-21"; }
                         ListElement { text: "ПОКС-21"; }
@@ -75,14 +75,14 @@ Page {
                     onCurrentIndexChanged: changeImage();
 
                         function changeImage(){
-                             if      (currentIndex == 0 ){
-                                 scheduleImg1.source = "qrc:/images/Schedule/IB_21.png"
-                             }else if(currentIndex == 1){
-                                scheduleImg1.source = "qrc:/images/Schedule/IB_11.png"
+                             if      (currentIndex == 1 ){
+                                 scheduleImg1.source = "qrc:/images/schedule/IB_21.png"
                              }else if(currentIndex == 2){
-                                scheduleImg1.source = "qrc:/images/Schedule/IB_11.png"
+                                scheduleImg1.source = "qrc:/images/schedule/IB_11.png"
                              }else if(currentIndex == 3){
-                                scheduleImg1.source = "qrc:/images/Schedule/IB_11.png"
+                                scheduleImg1.source = "qrc:/images/schedule/IB_11.png"
+                             }else if(currentIndex == 4){
+                                scheduleImg1.source = "qrc:/images/schedule/IB_11.png"
                              }
 
                         }

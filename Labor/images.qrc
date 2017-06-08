@@ -51,8 +51,8 @@
         <file>images/+material/menu@2x.png</file>
         <file>images/+material/menu@3x.png</file>
         <file>images/+material/menu@4x.png</file>
-        <file>images/Schedule/IB_21.png</file>
-        <file>images/Schedule/IB_11.png</file>
         <file>images/newicon.png</file>
+        <file>images/schedule/IB_11.png</file>
+        <file>images/schedule/IB_21.png</file>
     </qresource>
 </RCC>

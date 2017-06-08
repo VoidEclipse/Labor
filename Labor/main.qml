@@ -239,8 +239,7 @@ ApplicationWindow {
             }
 
             Label {
-                text: "Проект \"Labor\" помогает вам получать актуальное
-                       расписание занятий, важные новости РКСИ и многое другое!"
+                text: "Проект \"Labor\" помогает вам получать актуальное расписание занятий, важные новости РКСИ и многое другое!"
                 anchors.margins: 20
                 anchors.top: logo.bottom
                 anchors.left: parent.left

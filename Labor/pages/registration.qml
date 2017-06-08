@@ -70,7 +70,6 @@ Item {
 
 
         Button {
-
             Material.foreground: "white"
             Material.background: "#28b6f6"
             id: registerBtn
