@@ -1,5 +1,8 @@
 #include "registrationclass.h"
 
+#include "core.h"
+#include "userinfo.h"
+#include <QNetworkReply>
 #include <QJsonDocument>
 #include <QJsonObject>
 

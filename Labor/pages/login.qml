@@ -43,6 +43,10 @@ Item {
             text: qsTr("Авторизация")
             anchors.horizontalCenter: parent.horizontalCenter
             onClicked: {
+                if (emaiInput.text.trim().length===0 || passwordInput.text.trim().length===0)
+                    ToolTip.show("И чё это за хуйня?", 1000);
+                else
+                    loginCpp.loginUser(emaiInput.text.trim(), passwordInput.text.trim());
             }
 
         }

@@ -1,11 +1,10 @@
 #ifndef REGISTRATIONCLASS_H
 #define REGISTRATIONCLASS_H
 
-#include "core.h"
-#include <QNetworkReply>
 #include <QObject>
 
 class CoreApp;
+class QNetworkReply;
 
 class RegistrationClass : public QObject
 {

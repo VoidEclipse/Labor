@@ -6,13 +6,17 @@
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
 #include <QSettings>
+#include <QJsonDocument>
+#include <QJsonObject>
+#include <QJsonArray>
+#include <QJsonValue>
+#include <QNetworkReply>
 #include <QDebug>
-#include "registrationclass.h"
-#include "userinfo.h"
-#include "loginclass.h"
 
 #define _ qDebug() <<
 
+class UserInfo;
+class LoginClass;
 class RegistrationClass;
 
 class CoreApp : public QObject

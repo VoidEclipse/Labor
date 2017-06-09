@@ -12,7 +12,7 @@ ApplicationWindow {
     height: window.height
     visible: true
     title: "Labor"
-    minimumHeight: 400
+    minimumHeight: 600
     minimumWidth: 400
     Connections
     {
@@ -49,7 +49,7 @@ ApplicationWindow {
             anchors.fill: parent
 
             ToolButton {
-                //                enabled: userInfoCpp.login() !== "" && userInfoCpp.password() !== "" && userInfoCpp.token() !== ""
+                enabled: userInfoCpp.login() !== "" && userInfoCpp.password() !== "" && userInfoCpp.token() !== ""
                 contentItem: Image {
                     fillMode: Image.Pad
                     horizontalAlignment: Image.AlignHCenter
@@ -210,7 +210,7 @@ ApplicationWindow {
                 ListElement { title: "Студенты";      source: "qrc:/pages/DialogPage.qml";          image: "qrc:/images/studentsicon.png" }
                 ListElement { title: "Преподаватели"; source: "qrc:/pages/DelegatePage.qml";        image: "qrc:/images/teachersicon.png" }
                 ListElement { title: "Расписание";    source: "qrc:/pages/schedule.qml";            image: "qrc:/images/scheduleicon.png" }
-               }
+            }
             ScrollIndicator.vertical: ScrollIndicator { }
         }
     }
@@ -226,7 +226,7 @@ ApplicationWindow {
 
 
         initialItem: Pane {
-                    id: pane
+            id: pane
 
             Image {
                 id: logo
@@ -250,38 +250,38 @@ ApplicationWindow {
             }
         }
 
-                    Dialog {
-                            id: aboutDialog
-                            modal: true
-                            focus: true
-                            title: "О приложении"
-                            x: (window.width - width) / 2
-                            y: window.height / 6
-                            width: Math.min(window.width, window.height) / 3 * 2
-                            contentHeight: aboutColumn.height
+        Dialog {
+            id: aboutDialog
+            modal: true
+            focus: true
+            title: "О приложении"
+            x: (window.width - width) / 2
+            y: window.height / 6
+            width: Math.min(window.width, window.height) / 3 * 2
+            contentHeight: aboutColumn.height
 
-                            Column {
-                                id: aboutColumn
-                                spacing: 20
+            Column {
+                id: aboutColumn
+                spacing: 20
 
-                                Label {
-                                    width: aboutDialog.availableWidth
-                                    text: "Это приложение разработано для сайта (dipsite.vernicat.ru), в рамках стартапа \"Labor\"."
-                                    wrapMode: Label.Wrap
-                                    font.pixelSize: 12
-                                }
+                Label {
+                    width: aboutDialog.availableWidth
+                    text: "Это приложение разработано для сайта (dipsite.vernicat.ru), в рамках стартапа \"Labor\"."
+                    wrapMode: Label.Wrap
+                    font.pixelSize: 12
+                }
 
-                                Label {
-                                    width: aboutDialog.availableWidth
-                                    text: "Приложение полностью бесплатное и не требует никаких вложений, основываясь на свободной лицензии \"Freeware\"\n\n"
-                                        + "Разработчики проекта:\n"
-                                        + "Никита Куликов - мобильное приложение\n"
-                                        + "Антон Карпович и Екатерина Вернигорова - веб-сайт\n\n"
-                                        + "Все отзывы присылайте на почту: cutecats.team.rksi@gmail.com"
-                                    wrapMode: Label.Wrap
-                                    font.pixelSize: 12
-                                }
-                            }
-                        }
+                Label {
+                    width: aboutDialog.availableWidth
+                    text: "Приложение полностью бесплатное и не требует никаких вложений, основываясь на свободной лицензии \"Freeware\"\n\n"
+                          + "Разработчики проекта:\n"
+                          + "Никита Куликов - мобильное приложение\n"
+                          + "Антон Карпович и Екатерина Вернигорова - веб-сайт\n\n"
+                          + "Все отзывы присылайте на почту: cutecats.team.rksi@gmail.com"
+                    wrapMode: Label.Wrap
+                    font.pixelSize: 12
+                }
+            }
+        }
     }
 }

@@ -1,10 +1,7 @@
 #include "core.h"
-
-#include <QJsonDocument>
-#include <QJsonObject>
-#include <QJsonArray>
-#include <QJsonValue>
-#include <QNetworkReply>
+#include "registrationclass.h"
+#include "userinfo.h"
+#include "loginclass.h"
 
 CoreApp::CoreApp() : QObject()
 {
@@ -21,7 +18,7 @@ CoreApp::CoreApp() : QObject()
     https = new QNetworkAccessManager(this->parent());
 
     registration = new RegistrationClass(this->parent(), this);
-    login = new LoginClass(this->parent());
+    login = new LoginClass(this->parent(), this);
 
     engine = new QQmlApplicationEngine(this->parent());//Инициация ядра сцены qml
     context = engine->rootContext();//получение главного контекста
