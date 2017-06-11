@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>pages/login.qml</file>
+        <file>pages/news.qml</file>
+        <file>pages/profile.qml</file>
+        <file>pages/registration.qml</file>
+        <file>pages/schedule.qml</file>
+    </qresource>
+</RCC>
